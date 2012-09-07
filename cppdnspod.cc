@@ -6,10 +6,10 @@
 
 const std::string updatednsurl   = "https://dnsapi.cn/Record.Ddns";
 const std::string publicipurl    = "http://checkip.dyndns.org/";
-const std::string privateipurl   = "http://yourdomain/show_my_user_agent.php";//你自己的web页面，返回user agent
+const std::string privateipurl   = "http://yourdomain/show_my_user_agent.php";//你自己的web页面，返回user agent,若设置为空或者无效页面则会不断访问publicipurl取ip，小心被禁哦
 const std::string privateuacheck = "myself ua check key";
 const std::string dnspodagent    = "CppDdnsPodForLinux Client/1.0.0 (menterleo@gmail.com)";
-const std::string postdnsdata    = "login_email=&login_password=&domain_id=&record_id=&sub_domain=&record_line=默认&format=json";//补全相关内容
+const std::string postdnsdata    = "login_email=&login_password=&domain_id=&record_id=&sub_domain=&record_line=默认&format=json";//补全相关内容,参考api
 
 HTTPHANDLE hhmyself(privateipurl.c_str(),GET,privateuacheck.c_str(),"");
 HTTPHANDLE hhpublic(publicipurl.c_str(),GET,"getip,thanks!","");
