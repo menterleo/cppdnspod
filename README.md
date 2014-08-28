@@ -12,7 +12,7 @@ cppddnspod for linux
 执行make命令编译源码，
 
 自己想办法将生成的执行文件加到开机自启动。
-（我在rc.local里添加了这句话实现开机自启动 nohup /home/menter/cppdnspod/cppdnspod &）
+
 
 注意：
 
